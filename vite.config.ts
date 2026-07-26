@@ -4,6 +4,7 @@ import path from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: "/moonshoot-kimi-referal/",
   plugins: [react()],
   resolve: {
     alias: {
