@@ -3,7 +3,6 @@ import { Button } from "./ui/Button";
 import { ExternalLink } from "lucide-react";
 
 export function FinalCta() {
-  const hasValidReferralUrl = siteConfig.referralUrl && !siteConfig.referralUrl.includes("PASTE_MY_KIMI_REFERRAL_LINK_HERE");
 
   return (
     <section className="py-24 relative overflow-hidden">
@@ -21,11 +20,8 @@ export function FinalCta() {
           <Button 
             size="lg" 
             className="h-14 px-10 text-lg w-full sm:w-auto"
-            disabled={!hasValidReferralUrl}
             onClick={() => {
-              if (hasValidReferralUrl) {
-                window.open(siteConfig.referralUrl, "_blank", "noopener,noreferrer");
-              }
+              window.open(siteConfig.referralUrl, "_blank", "noopener,noreferrer");
             }}
           >
             Open referral link

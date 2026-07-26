@@ -36,11 +36,7 @@ export function Navbar() {
             size="sm" 
             className="hidden sm:inline-flex"
             onClick={() => {
-              if (siteConfig.referralUrl) {
-                window.open(siteConfig.referralUrl, "_blank", "noopener,noreferrer");
-              } else {
-                window.location.hash = "#referral";
-              }
+              window.open(siteConfig.referralUrl, "_blank", "noopener,noreferrer");
             }}
           >
             Get started
